@@ -1,0 +1,128 @@
+<!-- Variables
+*************************************************** -->
+<h2><a id="Variables" href="#Variables" class="anchor"># Variables</a></h2>
+
+<pre class="prettyprint lang-python">
+x = 6
+y = 'String'
+z = 1.05
+a = x
+</pre>
+
+<pre class="prettyprint lang-python">
+x, y, z, a              # (6, 'String', 1.05, 6)
+</pre>
+
+<pre class="prettyprint lang-python">
+type(x)                 # int
+type(y)                 # str
+type(z)                 # float
+type(a)                 # int
+</pre>
+
+<p class="note">Multiple assignments.</p>
+<pre class="prettyprint lang-python">
+a = x = 6
+
+y, z = 'String', 1.05
+</pre>
+
+<pre class="prettyprint lang-python">
+x, y, z, a              # (6, 'String', 1.05, 6)
+</pre>
+
+<p class="note">List assignments.</p>
+<pre class="prettyprint lang-python">
+d, t, v = [230, 45, 12]
+</pre>
+
+<pre class="prettyprint lang-python">
+d, t, v                 # (230, 45, 12)
+</pre>
+
+<p class="note">String assignments.</p>
+<pre class="prettyprint lang-python">
+a, b, c, d = '100B'
+</pre>
+
+<pre class="prettyprint lang-python">
+a, b, c, d              # ('1', '0', '0', 'B')
+</pre>
+
+<pre class="prettyprint lang-python">
+string = '100B'
+
+number = string[:3]
+letter = string[3:]
+</pre>
+
+<pre class="prettyprint lang-python">
+number, letter          # ('100', 'B')
+</pre>
+
+<p class="note">Delete a variable.</p>
+<pre class="prettyprint lang-python">
+del n
+</pre>
+
+<pre class="prettyprint lang-python">
+n                       # NameError: name 'n' is not defined
+</pre>
+
+<h3><a id="Variables-String-Indexing" href="#Variables-String-Indexing" class="anchor"># String Indexing</a></h3>
+<pre class="prettyprint lang-python">
+string = 'proton'
+</pre>
+
+<pre class="prettyprint lang-python">
+string[:]               # proton
+string[:2]              # pr
+string[-2:]             # on
+string[1:3]             # ro
+</pre>
+
+<p class="note">Reverse a string.</p>
+<pre class="prettyprint lang-python">
+string[::-1]            # notorp
+</pre>
+
+<p class="note">Skip every second character.</p>
+<pre class="prettyprint lang-python">
+string[0:-1:2]          # poo
+</pre>
+
+<h3><a id="Variables-String-Operations" href="#Variables-String-Operations" class="anchor"># String Operations</a></h3>
+<pre class="prettyprint lang-python">
+string = 'proton neutron'
+</pre>
+
+<pre class="prettyprint lang-python">
+string.capitalize()         # Proton neutron
+string.title()              # Proton Neutron
+string.upper()              # PROTON NEUTRON
+string.lower()              # proton neutron
+string.center(20, '.')      # ...proton neutron...
+</pre>
+
+<pre class="prettyprint lang-python">
+string.isdigit()            # False
+string.islower()            # True
+string.isupper()            # False
+</pre>
+
+<p class="note">Counting and finding letters in text.</p>
+<pre class="prettyprint lang-python">
+string.count('p', 0, len(string))       # 1
+string.find('t', 1, len(string))        # 3
+</pre>
+
+<p class="note">Removing whitespace from a string.</p>
+<pre class="prettyprint lang-python">
+string = '    some text    '
+</pre>
+
+<pre class="prettyprint lang-python">
+string.lstrip()                         # 'some text    '
+string.rstrip()                         # '    some text'
+string.strip()                          # 'some text'
+</pre>

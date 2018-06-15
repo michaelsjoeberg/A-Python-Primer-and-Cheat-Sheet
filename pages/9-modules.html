@@ -1,0 +1,60 @@
+<!-- Modules
+*************************************************** -->
+<h2><a id="Modules" href="#Modules" class="anchor"># Modules</a></h2>
+
+<h3><a id="Modules-Datetime" href="#Modules-Datetime" class="anchor"># Datetime</a></h3>
+<pre class="prettyprint lang-python">
+from datetime import datetime
+from datetime import timedelta
+</pre>
+
+<pre class="prettyprint lang-python">
+now = datetime.now()
+future = now + timedelta(12)
+</pre>
+
+<pre class="prettyprint lang-python">
+now                         # 2018-06-15 18:23:51.500993
+future                      # 2018-06-27 18:23:59.351647
+</pre>
+
+<pre class="prettyprint lang-python">
+now.year                    # 2018
+now.month                   # 6
+now.day                     # 15
+now.hour                    # 18
+now.minute                  # 23
+</pre>
+
+<p class="note">Difference between dates.</p>
+<pre class="prettyprint lang-python">
+difference = future - now
+</pre>
+
+<pre class="prettyprint lang-python">
+difference                  # 12 days, 0:00:00
+difference.days             # 12
+</pre>
+
+<h3><a id="Modules-Math" href="#Modules-Math" class="anchor"># Math</a></h3>
+<pre class="prettyprint lang-python">
+import math
+</pre>
+
+<pre class="prettyprint lang-python">
+math.pi                     # 3.14159265359
+math.e                      # 2.71828182846
+</pre>
+
+<p class="note">Mathematical functions, more at <a href="https://docs.python.org/2/library/math.html">https://docs.python.org/2/library/math.html</a>.</p>
+<pre class="prettyprint lang-python">
+math.floor(2.945)           # 2.0
+math.trunc(2.945)           # 2
+math.factorial(5)           # 120
+math.exp(1)                 # 2.71828182846
+math.sqrt(16)               # 4.0
+</pre>
+
+<pre class="prettyprint lang-python">
+math.sin(4 * math.pi / 180)             # 0.0697564737441
+</pre>

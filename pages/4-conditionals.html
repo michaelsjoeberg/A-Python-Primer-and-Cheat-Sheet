@@ -1,0 +1,49 @@
+<!-- Conditionals
+*************************************************** -->
+<h2><a id="Conditionals" href="#Conditionals" class="anchor"># Conditionals</a></h2>
+
+<pre class="prettyprint lang-python">
+a = 1.0
+b = 5.0
+</pre>
+
+<h3><a id="Conditionals-If-Else-Statements" href="#Conditionals-If-Else-Statements" class="anchor"># If-Else Statements</a></h3>
+
+<pre class="prettyprint lang-python">
+if (a < 1.0):
+    # do something
+
+elif (a == 1.0):
+    # do something
+
+else:
+    # do something
+</pre>
+
+<p class="note">Single line expression.</p>
+<pre class="prettyprint lang-python">
+c = (a / b) if a != 0 else a
+</pre>
+
+<pre class="prettyprint lang-python">
+c                               # 0.2
+</pre>
+
+<h3><a id="Conditionals-Logical-Operators" href="#Conditionals-Logical-Operators" class="anchor"># Logical Operators</a></h3>
+
+<pre class="prettyprint lang-python">
+T = True
+F = False
+</pre>
+
+<pre class="prettyprint lang-python">
+T or F                          # True
+F or (T and F)                  # False
+not T                           # False
+not (not T)                     # True
+</pre>
+
+<pre class="prettyprint lang-python">
+a == b                          # False
+a != b                          # True
+</pre>

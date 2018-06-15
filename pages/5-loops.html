@@ -1,0 +1,44 @@
+<!-- Loops
+*************************************************** -->
+<h2><a id="Loops" href="#Loops" class="anchor"># Loops</a></h2>
+
+<pre class="prettyprint lang-python">
+numbers = [1, 2, 3, 4]
+a = 0
+b = 5
+</pre>
+
+<h3><a id="Loops-For" href="#Loops-For" class="anchor"># For</a></h3>
+<pre class="prettyprint lang-python">
+for number in numbers:
+    # do something
+</pre>
+
+<p class="note">Nested for loops.</p>
+<pre class="prettyprint lang-python">
+for i in range(10):
+    for j in range(10):
+        # do something
+</pre>
+
+<p class="note">Using for loops and dictionaries.</p>
+<pre class="prettyprint lang-python">
+dict = {'Alpha': 1, 'Beta': 2}
+</pre>
+
+<pre class="prettyprint lang-python">
+for key in dict.keys():
+    print (key)                     # Alpha Beta
+
+for value in dict.values():
+    print (value)                   # 1 2
+
+for key, value in dict.items():
+    print (key, value)              # ('Alpha', 1) ('Beta', 2)
+</pre>
+
+<h3><a id="Loops-While" href="#Loops-While" class="anchor"># While</a></h3>
+<pre class="prettyprint lang-python">
+while (a < b):
+    # do something
+</pre>

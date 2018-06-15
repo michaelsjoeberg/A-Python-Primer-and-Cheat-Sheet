@@ -1,0 +1,55 @@
+<!-- Functions
+*************************************************** -->
+<h2><a id="Functions" href="#Functions" class="anchor"># Functions</a></h2>
+
+<pre class="prettyprint lang-python">
+def function(arg):
+    # do something
+
+    return
+</pre>
+
+<pre class="prettyprint lang-python">
+def power(base, x):
+    return base ** x
+</pre>
+
+<pre class="prettyprint lang-python">
+power(2, 3)                 # 8
+</pre>
+
+<p class="note">Default arguments.</p>
+<pre class="prettyprint lang-python">
+def power(base, x = 3):
+    return base ** x
+</pre>
+
+<pre class="prettyprint lang-python">
+power(2)                    # 8
+</pre>
+
+<p class="note">Multiple return values.</p>
+<pre class="prettyprint lang-python">
+def power(base, x):
+    result = base ** x
+
+    return result, base
+</pre>
+
+<pre class="prettyprint lang-python">
+result, base = power(2, 3)
+
+result, base                # (8, 2)
+</pre>
+
+<p class="note">Docstrings.</p>
+<pre class="prettyprint lang-python">
+def function(arg):
+    '''This is a docstring.'''
+
+    return
+</pre>
+
+<pre class="prettyprint lang-python">
+print (function.__doc__)    # This is a docstring.
+</pre>

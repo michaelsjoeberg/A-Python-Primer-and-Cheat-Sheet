@@ -1,0 +1,45 @@
+<!-- Classes
+*************************************************** -->
+<h2><a id="Classes" href="#Classes" class="anchor"># Classes</a></h2>
+
+<pre class="prettyprint lang-python">
+class Money (object):
+    def __init__(self, amount, currency):
+        self.amount = amount
+        self.currency = currency
+
+    def __str__(self):
+        return str(self.amount) + ' ' + self.currency
+</pre>
+
+<p class="note">Create a new instance of class.</p>
+<pre class="prettyprint lang-python">
+money = Money(220, 'EUR')
+
+money.amount, money.currency        # (220, 'EUR')
+</pre>
+
+<pre class="prettyprint lang-python">
+print(money)                        # 220 EUR
+</pre>
+
+<p class="note">Subclasses.</p>
+<pre class="prettyprint lang-python">
+class VirtualMoney (Money):
+    def __init__(self, date):
+        self.date = date
+
+    def __str__(self):
+        return str(self.amount) + ' ' + self.currency + ' (use before ' + self.date + ')'
+</pre>
+
+<pre class="prettyprint lang-python">
+virtual_money = VirtualMoney(220, 'EUR', '2018-12-31')
+
+virtual_money.amount = 20
+virtual_money.currency = 'DIS'
+</pre>
+
+<pre class="prettyprint lang-python">
+virtual_money                       # 20 DIS (use before 2018-12-31)
+</pre>

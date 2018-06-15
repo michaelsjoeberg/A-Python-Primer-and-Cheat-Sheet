@@ -1,0 +1,187 @@
+<!-- Data Structures
+*************************************************** -->
+<h2><a id="Data-Structures" href="#Data-Structures" class="anchor"># Data Structures</a></h2>
+<h3><a id="Data-Structures-Lists" href="#Data-Structures-Lists" class="anchor"># Lists</a></h3>
+
+<p class="note">Lists are mutable.</p>
+<pre class="prettyprint lang-python">
+list_one = ['REMOVE', 'RANDOM']
+list_two = [200, -2, [1.0, 0.0]]
+
+list_one[0] = 'ADD'
+</pre>
+
+<pre class="prettyprint lang-python">
+list_one[0]             # ADD
+</pre>
+
+<pre class="prettyprint lang-python">
+len(list_one)           # 2
+len(list_two)           # 3
+</pre>
+
+<p class="note">Concatenate lists.</p>
+<pre class="prettyprint lang-python">
+list = list_one + list_two
+</pre>
+
+<pre class="prettyprint lang-python">
+list                    # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0]]
+</pre>
+
+<p class="note">List operations.</p>
+<pre class="prettyprint lang-python">
+list.append('NULL')     # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0], 'NULL']
+list.sort()             # [-2, 200, [1.0, 0.0], 'ADD', 'NULL', 'RANDOM']
+</pre>
+
+<p class="note">Create list from a string.</p>
+<pre class="prettyprint lang-python">
+list_string = list('100B')
+</pre>
+
+<pre class="prettyprint lang-python">
+list_string             # ['1', '0', '0', 'B']
+</pre>
+
+<h3><a id="Data-Structures-Tuples" href="#Data-Structures-Tuples" class="anchor"># Tuples</a></h3>
+
+<p class="note">Tuples are immutable.</p>
+<pre class="prettyprint lang-python">
+tuple_one = (1.0, 'String', 4)
+tuple_two = ('Alpha', 'Bravo', (1, 0))
+</pre>
+
+<pre class="prettyprint lang-python">
+tuple_one               # (1.0, 'String', 4)
+tuple_two               # ('Alpha', 'Bravo', (1, 0))
+tuple_two[2][1]         # 0
+</pre>
+
+<p class="note">Concatenate tuples.</p>
+<pre class="prettyprint lang-python">
+tuple = tuple_one + tuple_two
+</pre>
+
+<pre class="prettyprint lang-python">
+tuple                   # (1.0, 'String', 4, 'Alpha', 'Bravo', (1, 0))
+</pre>
+
+<p class="note">Create tuple from a list.</p>
+<pre class="prettyprint lang-python">
+tuple_list = tuple([100, 'B'])
+</pre>
+
+<pre class="prettyprint lang-python">
+tuple_list              # (100, 'B')
+</pre>
+
+<h3><a id="Data-Structures-Dictionaries" href="#Data-Structures-Dictionaries" class="anchor"># Dictionaries</a></h3>
+
+<p class="note">Dictionaries, or hash table, has key:value pairs.</p>
+<pre class="prettyprint lang-python">
+dict = {'Adam': ['adam@email.com', 2445055],
+        'Bard': 'bard@email.com'}
+</pre>
+
+<pre class="prettyprint lang-python">
+dict                    # {'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@email.com'}
+dict['Adam']            # ['adam@email.com', 2445055]
+dict['Adam'][1]         # 2445055
+</pre>
+
+<pre class="prettyprint lang-python">
+dict['Adam']            # ['adam@email.com', 2445055]
+</pre>
+
+<p class="note">Add key:value pair to a dictionary.</p>
+<pre class="prettyprint lang-python">
+dict['Cole'] = 'cole@email.com'
+</pre>
+
+<pre class="prettyprint lang-python">
+dict                    # {'Cole': 'cole@email.com', 'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@email.com'}
+</pre>
+
+<pre class="prettyprint lang-python">
+del dict['Cole']
+
+dict                    # {'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@email.com'}
+</pre>
+
+<pre class="prettyprint lang-python">
+'Adam' in dict          # True
+</pre>
+
+<p class="note">Create dictionary from a list of tuples.</p>
+<pre class="prettyprint lang-python">
+dict_list_tuples = dict([(1, "x"), (2, "y"), (3, "z")])
+</pre>
+
+<pre class="prettyprint lang-python">
+dict_list_tuples        # {1: 'x', 2: 'y', 3: 'z'}
+</pre>
+
+<h3><a id="Data-Structures-Sets" href="#Data-Structures-Sets" class="anchor"># Sets</a></h3>
+
+<p class="note">Sets are unordered collections.</p>
+<pre class="prettyprint lang-python">
+set = {1.0, 10, 'String', (1, 0, 1, 0)}
+</pre>
+
+<pre class="prettyprint lang-python">
+set                     # set([(1, 0, 1, 0), 10, 'String', 1.0])
+</pre>
+
+<pre class="prettyprint lang-python">
+'String' in set         # True
+'Java' in set           # False
+</pre>
+
+<p class="note">Add to a set.</p>
+<pre class="prettyprint lang-python">
+set.add('Python')
+</pre>
+
+<pre class="prettyprint lang-python">
+set                     # set(['Python', (1, 0, 1, 0), 10, 'String', 1.0])
+</pre>
+
+<pre class="prettyprint lang-python">
+set.remove('Python')
+</pre>
+
+<pre class="prettyprint lang-python">
+set                     # set([(1, 0, 1, 0), 10, 'String', 1.0])
+</pre>
+
+<p class="note">Set operations.</p>
+<pre class="prettyprint lang-python">
+set_one = {1, 2, 3}
+set_two = {3, 4, 5}
+</pre>
+
+<pre class="prettyprint lang-python">
+set_one                 # set([1, 2, 3])
+set_two                 # set([3, 4, 5])
+</pre>
+
+<pre class="prettyprint lang-python">
+set_one | set_two       # Union                 -> set([1, 2, 3, 4, 5])
+set_one & set_two       # Intersection          -> set([3])
+set_one - set_two       # Difference            -> set([1, 2])
+set_one ^ set_two       # Symmetric difference  -> set([1, 2, 4, 5])
+</pre>
+
+<p class="note">Subset and superset.</p>
+<pre class="prettyprint lang-python">
+set_a = {1, 2}
+set_b = {1, 2}
+set_c = {1, 2, 3, 4, 5}
+</pre>
+
+<pre class="prettyprint lang-python">
+set_a < set_b           # Strict subset         -> False
+set_a <= set_b          # Subset                -> True
+set_c > set_a           # Strict superset       -> True
+</pre>
