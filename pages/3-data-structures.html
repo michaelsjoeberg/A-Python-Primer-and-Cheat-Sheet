@@ -7,41 +7,35 @@
 <pre class="prettyprint lang-python">
 list_one = ['REMOVE', 'RANDOM']
 list_two = [200, -2, [1.0, 0.0]]
-
-list_one[0] = 'ADD'
 </pre>
 
 <pre class="prettyprint lang-python">
-list_one[0]             # ADD
+list_one[0] = 'ADD'         # ['ADD', 'RANDOM']
 </pre>
 
 <pre class="prettyprint lang-python">
-len(list_one)           # 2
-len(list_two)           # 3
+list_one[1]                 # RANDOM
+</pre>
+
+<pre class="prettyprint lang-python">
+len(list_one)               # 2
+len(list_two)               # 3
 </pre>
 
 <p class="note">Concatenate lists.</p>
 <pre class="prettyprint lang-python">
-list = list_one + list_two
-</pre>
-
-<pre class="prettyprint lang-python">
-list                    # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0]]
+list = list_one + list_two          # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0]]
 </pre>
 
 <p class="note">List operations.</p>
 <pre class="prettyprint lang-python">
-list.append('NULL')     # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0], 'NULL']
-list.sort()             # [-2, 200, [1.0, 0.0], 'ADD', 'NULL', 'RANDOM']
+list.append('NULL')                 # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0], 'NULL']
+list.sort()                         # [-2, 200, [1.0, 0.0], 'ADD', 'NULL', 'RANDOM']
 </pre>
 
 <p class="note">Create list from a string.</p>
 <pre class="prettyprint lang-python">
-list_string = list('100B')
-</pre>
-
-<pre class="prettyprint lang-python">
-list_string             # ['1', '0', '0', 'B']
+list_string = list('100B')          # ['1', '0', '0', 'B']
 </pre>
 
 <h3><a id="Data-Structures-Tuples" href="#Data-Structures-Tuples" class="anchor"># Tuples</a></h3>
@@ -53,32 +47,24 @@ tuple_two = ('Alpha', 'Bravo', (1, 0))
 </pre>
 
 <pre class="prettyprint lang-python">
-tuple_one               # (1.0, 'String', 4)
-tuple_two               # ('Alpha', 'Bravo', (1, 0))
-tuple_two[2][1]         # 0
+tuple_one                           # (1.0, 'String', 4)
+tuple_two                           # ('Alpha', 'Bravo', (1, 0))
+tuple_two[2][1]                     # 0
 </pre>
 
 <p class="note">Concatenate tuples.</p>
 <pre class="prettyprint lang-python">
-tuple = tuple_one + tuple_two
-</pre>
-
-<pre class="prettyprint lang-python">
-tuple                   # (1.0, 'String', 4, 'Alpha', 'Bravo', (1, 0))
+tuple = tuple_one + tuple_two       # (1.0, 'String', 4, 'Alpha', 'Bravo', (1, 0))
 </pre>
 
 <p class="note">Create tuple from a list.</p>
 <pre class="prettyprint lang-python">
-tuple_list = tuple([100, 'B'])
-</pre>
-
-<pre class="prettyprint lang-python">
-tuple_list              # (100, 'B')
+tuple_list = tuple([100, 'B'])      # (100, 'B')
 </pre>
 
 <h3><a id="Data-Structures-Dictionaries" href="#Data-Structures-Dictionaries" class="anchor"># Dictionaries</a></h3>
 
-<p class="note">Dictionaries, or hash table, has key:value pairs.</p>
+<p class="note">Dictionaries, or hash tables, with key:value pairs.</p>
 <pre class="prettyprint lang-python">
 dict = {'Adam': ['adam@email.com', 2445055],
         'Bard': 'bard@email.com'}
@@ -91,22 +77,24 @@ dict['Adam'][1]         # 2445055
 </pre>
 
 <pre class="prettyprint lang-python">
-dict['Adam']            # ['adam@email.com', 2445055]
+dict['Bard'] = 'bard@anotheremail.com'
 </pre>
 
-<p class="note">Add key:value pair to a dictionary.</p>
+<pre class="prettyprint lang-python">
+dict                    # {'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@anotheremail.com'}
+</pre>
+
+<p class="note">Add and remove key:value pairs.</p>
 <pre class="prettyprint lang-python">
 dict['Cole'] = 'cole@email.com'
 </pre>
 
 <pre class="prettyprint lang-python">
-dict                    # {'Cole': 'cole@email.com', 'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@email.com'}
+dict                    # {'Cole': 'cole@email.com', 'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@anotheremail.com'}
 </pre>
 
 <pre class="prettyprint lang-python">
-del dict['Cole']
-
-dict                    # {'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@email.com'}
+del dict['Cole']        # {'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@anotheremail.com'}
 </pre>
 
 <pre class="prettyprint lang-python">
@@ -140,37 +128,24 @@ set                     # set([(1, 0, 1, 0), 10, 'String', 1.0])
 
 <p class="note">Add to a set.</p>
 <pre class="prettyprint lang-python">
-set.add('Python')
+set.add('Python')       # set(['Python', (1, 0, 1, 0), 10, 'String', 1.0])
 </pre>
 
 <pre class="prettyprint lang-python">
-set                     # set(['Python', (1, 0, 1, 0), 10, 'String', 1.0])
-</pre>
-
-<pre class="prettyprint lang-python">
-set.remove('Python')
-</pre>
-
-<pre class="prettyprint lang-python">
-set                     # set([(1, 0, 1, 0), 10, 'String', 1.0])
+set.remove('Python')    # set([(1, 0, 1, 0), 10, 'String', 1.0])
 </pre>
 
 <p class="note">Set operations.</p>
 <pre class="prettyprint lang-python">
-set_one = {1, 2, 3}
-set_two = {3, 4, 5}
+set_one = {1, 2, 3}     # set([1, 2, 3])
+set_two = {3, 4, 5}     # set([3, 4, 5])
 </pre>
 
 <pre class="prettyprint lang-python">
-set_one                 # set([1, 2, 3])
-set_two                 # set([3, 4, 5])
-</pre>
-
-<pre class="prettyprint lang-python">
-set_one | set_two       # Union                 -> set([1, 2, 3, 4, 5])
-set_one & set_two       # Intersection          -> set([3])
-set_one - set_two       # Difference            -> set([1, 2])
-set_one ^ set_two       # Symmetric difference  -> set([1, 2, 4, 5])
+set_one | set_two       # set([1, 2, 3, 4, 5])      (Union)
+set_one & set_two       # set([3])                  (Intersection)
+set_one - set_two       # set([1, 2])               (Difference)
+set_one ^ set_two       # set([1, 2, 4, 5])         (Symmetric difference)
 </pre>
 
 <p class="note">Subset and superset.</p>
@@ -181,7 +156,7 @@ set_c = {1, 2, 3, 4, 5}
 </pre>
 
 <pre class="prettyprint lang-python">
-set_a < set_b           # Strict subset         -> False
-set_a <= set_b          # Subset                -> True
-set_c > set_a           # Strict superset       -> True
+set_a < set_b           # False                     (Strict subset)
+set_a <= set_b          # True                      (Subset)
+set_c > set_a           # True                      (Strict superset)
 </pre>

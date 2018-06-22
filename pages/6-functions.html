@@ -11,6 +11,7 @@ def function(arg):
 
 <pre class="prettyprint lang-python">
 def power(base, x):
+
     return base ** x
 </pre>
 
@@ -21,6 +22,7 @@ power(2, 3)                 # 8
 <p class="note">Default arguments.</p>
 <pre class="prettyprint lang-python">
 def power(base, x = 3):
+
     return base ** x
 </pre>
 
@@ -37,9 +39,7 @@ def power(base, x):
 </pre>
 
 <pre class="prettyprint lang-python">
-result, base = power(2, 3)
-
-result, base                # (8, 2)
+result, base = power(2, 3)      # (8, 2)
 </pre>
 
 <p class="note">Docstrings.</p>
@@ -51,5 +51,5 @@ def function(arg):
 </pre>
 
 <pre class="prettyprint lang-python">
-print (function.__doc__)    # This is a docstring.
+print (function.__doc__)        # This is a docstring.
 </pre>

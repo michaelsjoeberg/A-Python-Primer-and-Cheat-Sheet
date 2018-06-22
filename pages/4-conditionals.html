@@ -2,12 +2,12 @@
 *************************************************** -->
 <h2><a id="Conditionals" href="#Conditionals" class="anchor"># Conditionals</a></h2>
 
+<h3><a id="Conditionals-If-Else-Statements" href="#Conditionals-If-Else-Statements" class="anchor"># If-Else Statements</a></h3>
+
 <pre class="prettyprint lang-python">
 a = 1.0
 b = 5.0
 </pre>
-
-<h3><a id="Conditionals-If-Else-Statements" href="#Conditionals-If-Else-Statements" class="anchor"># If-Else Statements</a></h3>
 
 <pre class="prettyprint lang-python">
 if (a < 1.0):
@@ -22,11 +22,7 @@ else:
 
 <p class="note">Single line expression.</p>
 <pre class="prettyprint lang-python">
-c = (a / b) if a != 0 else a
-</pre>
-
-<pre class="prettyprint lang-python">
-c                               # 0.2
+c = (a / b) if a != 0 else a    # 0.2
 </pre>
 
 <h3><a id="Conditionals-Logical-Operators" href="#Conditionals-Logical-Operators" class="anchor"># Logical Operators</a></h3>
@@ -38,12 +34,15 @@ F = False
 
 <pre class="prettyprint lang-python">
 T or F                          # True
-F or (T and F)                  # False
+T and (T and F)                 # False
+</pre>
+
+<pre class="prettyprint lang-python">
 not T                           # False
 not (not T)                     # True
 </pre>
 
 <pre class="prettyprint lang-python">
-a == b                          # False
-a != b                          # True
+1 == 2                          # False
+1 != 2                          # True
 </pre>

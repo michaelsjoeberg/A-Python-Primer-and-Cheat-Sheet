@@ -10,43 +10,35 @@ a = x
 </pre>
 
 <pre class="prettyprint lang-python">
-x, y, z, a              # (6, 'String', 1.05, 6)
+x, y, z, a                  # (6, 'String', 1.05, 6)
 </pre>
 
 <pre class="prettyprint lang-python">
-type(x)                 # int
-type(y)                 # str
-type(z)                 # float
-type(a)                 # int
+type(x)                     # int
+type(y)                     # str
+type(z)                     # float
+type(a)                     # int
 </pre>
 
 <p class="note">Multiple assignments.</p>
 <pre class="prettyprint lang-python">
-a = x = 6
+x = a = 6
 
 y, z = 'String', 1.05
 </pre>
 
 <pre class="prettyprint lang-python">
-x, y, z, a              # (6, 'String', 1.05, 6)
+x, y, z, a                  # (6, 'String', 1.05, 6)
 </pre>
 
 <p class="note">List assignments.</p>
 <pre class="prettyprint lang-python">
-d, t, v = [230, 45, 12]
-</pre>
-
-<pre class="prettyprint lang-python">
-d, t, v                 # (230, 45, 12)
+d, t, v = [230, 45, 12]     # (230, 45, 12)
 </pre>
 
 <p class="note">String assignments.</p>
 <pre class="prettyprint lang-python">
-a, b, c, d = '100B'
-</pre>
-
-<pre class="prettyprint lang-python">
-a, b, c, d              # ('1', '0', '0', 'B')
+a, b, c, d = '100B'         # ('1', '0', '0', 'B')
 </pre>
 
 <pre class="prettyprint lang-python">
@@ -57,7 +49,7 @@ letter = string[3:]
 </pre>
 
 <pre class="prettyprint lang-python">
-number, letter          # ('100', 'B')
+number, letter              # ('100', 'B')
 </pre>
 
 <p class="note">Delete a variable.</p>
@@ -66,7 +58,7 @@ del n
 </pre>
 
 <pre class="prettyprint lang-python">
-n                       # NameError: name 'n' is not defined
+n                           # NameError: name 'n' is not defined
 </pre>
 
 <h3><a id="Variables-String-Indexing" href="#Variables-String-Indexing" class="anchor"># String Indexing</a></h3>

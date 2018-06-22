@@ -193,7 +193,7 @@ if (__name__ == "__main__"):
     main()
 </pre>
 
-<p>Run with: <strong>$ python filename.py</strong></p>
+<p>Build and run with: <strong>$ python filename.py</strong>.</p>
 
 <p class="note">Handle exceptions.</p>
 <pre class="prettyprint lang-python">
@@ -201,11 +201,11 @@ try:
     # do something
 
 except ZeroDivisionError:
-    print('Cannot divide with zero.')
+    print ('Cannot divide with zero.')
     # do something
 
 except Exception as e:
-    print('Error: ' + str(e))
+    print ('Error: ' + str(e))
     # do something
 
 finally:
@@ -221,6 +221,9 @@ finally:
 20 - 10                 # 10
 10 * 20                 # 200
 20 / 10                 # 2
+</pre>
+
+<pre class="prettyprint lang-python">
 10 ** 2                 # 100
 </pre>
 
@@ -237,14 +240,14 @@ finally:
 30.0 / 20.0             # 1.5
 </pre>
 
-<p class="note">Integer divison, or the quotient.</p>
+<p class="note">Integer divison, or quotient.</p>
 <pre class="prettyprint lang-python">
 20.0 // 20.0            # 1.0
 30.0 // 20.0            # 1.0
 40.0 // 20.0            # 2.0
 </pre>
 
-<p class="note">Modulo, or the remainder.</p>
+<p class="note">Modulo, or remainder.</p>
 <pre class="prettyprint lang-python">
 12.5 % 10.0             # 2.5
 10.0 % 20.0             # 10.0
@@ -262,10 +265,13 @@ max(1, 2, 3, 4)         # 4
 <pre class="prettyprint lang-python">
 round(2.945)            # 3.0
 round(2.495)            # 2.0
+</pre>
+
+<pre class="prettyprint lang-python">
 round(2.945, 2)         # 2.94
 </pre>
 
-<p class="note">See <a href="#Modules-Math">Math</a> for more.</p>
+<p class="note">See <a href="#Modules-Math"><strong>Math</strong></a> for more.</p>
 
 <!-- Variables
 *************************************************** -->
@@ -279,43 +285,35 @@ a = x
 </pre>
 
 <pre class="prettyprint lang-python">
-x, y, z, a              # (6, 'String', 1.05, 6)
+x, y, z, a                  # (6, 'String', 1.05, 6)
 </pre>
 
 <pre class="prettyprint lang-python">
-type(x)                 # int
-type(y)                 # str
-type(z)                 # float
-type(a)                 # int
+type(x)                     # int
+type(y)                     # str
+type(z)                     # float
+type(a)                     # int
 </pre>
 
 <p class="note">Multiple assignments.</p>
 <pre class="prettyprint lang-python">
-a = x = 6
+x = a = 6
 
 y, z = 'String', 1.05
 </pre>
 
 <pre class="prettyprint lang-python">
-x, y, z, a              # (6, 'String', 1.05, 6)
+x, y, z, a                  # (6, 'String', 1.05, 6)
 </pre>
 
 <p class="note">List assignments.</p>
 <pre class="prettyprint lang-python">
-d, t, v = [230, 45, 12]
-</pre>
-
-<pre class="prettyprint lang-python">
-d, t, v                 # (230, 45, 12)
+d, t, v = [230, 45, 12]     # (230, 45, 12)
 </pre>
 
 <p class="note">String assignments.</p>
 <pre class="prettyprint lang-python">
-a, b, c, d = '100B'
-</pre>
-
-<pre class="prettyprint lang-python">
-a, b, c, d              # ('1', '0', '0', 'B')
+a, b, c, d = '100B'         # ('1', '0', '0', 'B')
 </pre>
 
 <pre class="prettyprint lang-python">
@@ -326,7 +324,7 @@ letter = string[3:]
 </pre>
 
 <pre class="prettyprint lang-python">
-number, letter          # ('100', 'B')
+number, letter              # ('100', 'B')
 </pre>
 
 <p class="note">Delete a variable.</p>
@@ -335,7 +333,7 @@ del n
 </pre>
 
 <pre class="prettyprint lang-python">
-n                       # NameError: name 'n' is not defined
+n                           # NameError: name 'n' is not defined
 </pre>
 
 <h3><a id="Variables-String-Indexing" href="#Variables-String-Indexing" class="anchor"># String Indexing</a></h3>
@@ -405,41 +403,35 @@ string.strip()                          # 'some text'
 <pre class="prettyprint lang-python">
 list_one = ['REMOVE', 'RANDOM']
 list_two = [200, -2, [1.0, 0.0]]
-
-list_one[0] = 'ADD'
 </pre>
 
 <pre class="prettyprint lang-python">
-list_one[0]             # ADD
+list_one[0] = 'ADD'         # ['ADD', 'RANDOM']
 </pre>
 
 <pre class="prettyprint lang-python">
-len(list_one)           # 2
-len(list_two)           # 3
+list_one[1]                 # RANDOM
+</pre>
+
+<pre class="prettyprint lang-python">
+len(list_one)               # 2
+len(list_two)               # 3
 </pre>
 
 <p class="note">Concatenate lists.</p>
 <pre class="prettyprint lang-python">
-list = list_one + list_two
-</pre>
-
-<pre class="prettyprint lang-python">
-list                    # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0]]
+list = list_one + list_two          # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0]]
 </pre>
 
 <p class="note">List operations.</p>
 <pre class="prettyprint lang-python">
-list.append('NULL')     # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0], 'NULL']
-list.sort()             # [-2, 200, [1.0, 0.0], 'ADD', 'NULL', 'RANDOM']
+list.append('NULL')                 # ['ADD', 'RANDOM', 200, -2, [1.0, 0.0], 'NULL']
+list.sort()                         # [-2, 200, [1.0, 0.0], 'ADD', 'NULL', 'RANDOM']
 </pre>
 
 <p class="note">Create list from a string.</p>
 <pre class="prettyprint lang-python">
-list_string = list('100B')
-</pre>
-
-<pre class="prettyprint lang-python">
-list_string             # ['1', '0', '0', 'B']
+list_string = list('100B')          # ['1', '0', '0', 'B']
 </pre>
 
 <h3><a id="Data-Structures-Tuples" href="#Data-Structures-Tuples" class="anchor"># Tuples</a></h3>
@@ -451,32 +443,24 @@ tuple_two = ('Alpha', 'Bravo', (1, 0))
 </pre>
 
 <pre class="prettyprint lang-python">
-tuple_one               # (1.0, 'String', 4)
-tuple_two               # ('Alpha', 'Bravo', (1, 0))
-tuple_two[2][1]         # 0
+tuple_one                           # (1.0, 'String', 4)
+tuple_two                           # ('Alpha', 'Bravo', (1, 0))
+tuple_two[2][1]                     # 0
 </pre>
 
 <p class="note">Concatenate tuples.</p>
 <pre class="prettyprint lang-python">
-tuple = tuple_one + tuple_two
-</pre>
-
-<pre class="prettyprint lang-python">
-tuple                   # (1.0, 'String', 4, 'Alpha', 'Bravo', (1, 0))
+tuple = tuple_one + tuple_two       # (1.0, 'String', 4, 'Alpha', 'Bravo', (1, 0))
 </pre>
 
 <p class="note">Create tuple from a list.</p>
 <pre class="prettyprint lang-python">
-tuple_list = tuple([100, 'B'])
-</pre>
-
-<pre class="prettyprint lang-python">
-tuple_list              # (100, 'B')
+tuple_list = tuple([100, 'B'])      # (100, 'B')
 </pre>
 
 <h3><a id="Data-Structures-Dictionaries" href="#Data-Structures-Dictionaries" class="anchor"># Dictionaries</a></h3>
 
-<p class="note">Dictionaries, or hash table, has key:value pairs.</p>
+<p class="note">Dictionaries, or hash tables, with key:value pairs.</p>
 <pre class="prettyprint lang-python">
 dict = {'Adam': ['adam@email.com', 2445055],
         'Bard': 'bard@email.com'}
@@ -489,22 +473,24 @@ dict['Adam'][1]         # 2445055
 </pre>
 
 <pre class="prettyprint lang-python">
-dict['Adam']            # ['adam@email.com', 2445055]
+dict['Bard'] = 'bard@anotheremail.com'
 </pre>
 
-<p class="note">Add key:value pair to a dictionary.</p>
+<pre class="prettyprint lang-python">
+dict                    # {'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@anotheremail.com'}
+</pre>
+
+<p class="note">Add and remove key:value pairs.</p>
 <pre class="prettyprint lang-python">
 dict['Cole'] = 'cole@email.com'
 </pre>
 
 <pre class="prettyprint lang-python">
-dict                    # {'Cole': 'cole@email.com', 'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@email.com'}
+dict                    # {'Cole': 'cole@email.com', 'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@anotheremail.com'}
 </pre>
 
 <pre class="prettyprint lang-python">
-del dict['Cole']
-
-dict                    # {'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@email.com'}
+del dict['Cole']        # {'Adam': ['adam@email.com', 2445055], 'Bard': 'bard@anotheremail.com'}
 </pre>
 
 <pre class="prettyprint lang-python">
@@ -538,37 +524,24 @@ set                     # set([(1, 0, 1, 0), 10, 'String', 1.0])
 
 <p class="note">Add to a set.</p>
 <pre class="prettyprint lang-python">
-set.add('Python')
+set.add('Python')       # set(['Python', (1, 0, 1, 0), 10, 'String', 1.0])
 </pre>
 
 <pre class="prettyprint lang-python">
-set                     # set(['Python', (1, 0, 1, 0), 10, 'String', 1.0])
-</pre>
-
-<pre class="prettyprint lang-python">
-set.remove('Python')
-</pre>
-
-<pre class="prettyprint lang-python">
-set                     # set([(1, 0, 1, 0), 10, 'String', 1.0])
+set.remove('Python')    # set([(1, 0, 1, 0), 10, 'String', 1.0])
 </pre>
 
 <p class="note">Set operations.</p>
 <pre class="prettyprint lang-python">
-set_one = {1, 2, 3}
-set_two = {3, 4, 5}
+set_one = {1, 2, 3}     # set([1, 2, 3])
+set_two = {3, 4, 5}     # set([3, 4, 5])
 </pre>
 
 <pre class="prettyprint lang-python">
-set_one                 # set([1, 2, 3])
-set_two                 # set([3, 4, 5])
-</pre>
-
-<pre class="prettyprint lang-python">
-set_one | set_two       # Union                 -> set([1, 2, 3, 4, 5])
-set_one & set_two       # Intersection          -> set([3])
-set_one - set_two       # Difference            -> set([1, 2])
-set_one ^ set_two       # Symmetric difference  -> set([1, 2, 4, 5])
+set_one | set_two       # set([1, 2, 3, 4, 5])      (Union)
+set_one & set_two       # set([3])                  (Intersection)
+set_one - set_two       # set([1, 2])               (Difference)
+set_one ^ set_two       # set([1, 2, 4, 5])         (Symmetric difference)
 </pre>
 
 <p class="note">Subset and superset.</p>
@@ -579,21 +552,21 @@ set_c = {1, 2, 3, 4, 5}
 </pre>
 
 <pre class="prettyprint lang-python">
-set_a < set_b           # Strict subset         -> False
-set_a <= set_b          # Subset                -> True
-set_c > set_a           # Strict superset       -> True
+set_a < set_b           # False                     (Strict subset)
+set_a <= set_b          # True                      (Subset)
+set_c > set_a           # True                      (Strict superset)
 </pre>
 
 <!-- Conditionals
 *************************************************** -->
 <h2><a id="Conditionals" href="#Conditionals" class="anchor"># Conditionals</a></h2>
 
+<h3><a id="Conditionals-If-Else-Statements" href="#Conditionals-If-Else-Statements" class="anchor"># If-Else Statements</a></h3>
+
 <pre class="prettyprint lang-python">
 a = 1.0
 b = 5.0
 </pre>
-
-<h3><a id="Conditionals-If-Else-Statements" href="#Conditionals-If-Else-Statements" class="anchor"># If-Else Statements</a></h3>
 
 <pre class="prettyprint lang-python">
 if (a < 1.0):
@@ -608,11 +581,7 @@ else:
 
 <p class="note">Single line expression.</p>
 <pre class="prettyprint lang-python">
-c = (a / b) if a != 0 else a
-</pre>
-
-<pre class="prettyprint lang-python">
-c                               # 0.2
+c = (a / b) if a != 0 else a    # 0.2
 </pre>
 
 <h3><a id="Conditionals-Logical-Operators" href="#Conditionals-Logical-Operators" class="anchor"># Logical Operators</a></h3>
@@ -624,27 +593,28 @@ F = False
 
 <pre class="prettyprint lang-python">
 T or F                          # True
-F or (T and F)                  # False
+T and (T and F)                 # False
+</pre>
+
+<pre class="prettyprint lang-python">
 not T                           # False
 not (not T)                     # True
 </pre>
 
 <pre class="prettyprint lang-python">
-a == b                          # False
-a != b                          # True
+1 == 2                          # False
+1 != 2                          # True
 </pre>
 
 <!-- Loops
 *************************************************** -->
 <h2><a id="Loops" href="#Loops" class="anchor"># Loops</a></h2>
 
+<h3><a id="Loops-For" href="#Loops-For" class="anchor"># For</a></h3>
 <pre class="prettyprint lang-python">
 numbers = [1, 2, 3, 4]
-a = 0
-b = 5
 </pre>
 
-<h3><a id="Loops-For" href="#Loops-For" class="anchor"># For</a></h3>
 <pre class="prettyprint lang-python">
 for number in numbers:
     # do something
@@ -675,8 +645,17 @@ for key, value in dict.items():
 
 <h3><a id="Loops-While" href="#Loops-While" class="anchor"># While</a></h3>
 <pre class="prettyprint lang-python">
+a = 0
+b = 5
+</pre>
+<pre class="prettyprint lang-python">
 while (a < b):
     # do something
+
+    a += 1
+</pre>
+<pre class="prettyprint lang-python">
+print (a)                           # 5
 </pre>
 
 <!-- Functions
@@ -692,6 +671,7 @@ def function(arg):
 
 <pre class="prettyprint lang-python">
 def power(base, x):
+
     return base ** x
 </pre>
 
@@ -702,6 +682,7 @@ power(2, 3)                 # 8
 <p class="note">Default arguments.</p>
 <pre class="prettyprint lang-python">
 def power(base, x = 3):
+
     return base ** x
 </pre>
 
@@ -718,9 +699,7 @@ def power(base, x):
 </pre>
 
 <pre class="prettyprint lang-python">
-result, base = power(2, 3)
-
-result, base                # (8, 2)
+result, base = power(2, 3)      # (8, 2)
 </pre>
 
 <p class="note">Docstrings.</p>
@@ -732,7 +711,7 @@ def function(arg):
 </pre>
 
 <pre class="prettyprint lang-python">
-print (function.__doc__)    # This is a docstring.
+print (function.__doc__)        # This is a docstring.
 </pre>
 
 <!-- Classes
@@ -741,6 +720,7 @@ print (function.__doc__)    # This is a docstring.
 
 <pre class="prettyprint lang-python">
 class Money (object):
+
     def __init__(self, amount, currency):
         self.amount = amount
         self.currency = currency
@@ -751,8 +731,10 @@ class Money (object):
 
 <p class="note">Create a new instance of class.</p>
 <pre class="prettyprint lang-python">
-money = Money(220, 'EUR')
+money = Money(220, 'EUR') 
+</pre>
 
+<pre class="prettyprint lang-python">
 money.amount, money.currency        # (220, 'EUR')
 </pre>
 
@@ -763,6 +745,7 @@ print(money)                        # 220 EUR
 <p class="note">Subclasses.</p>
 <pre class="prettyprint lang-python">
 class VirtualMoney (Money):
+
     def __init__(self, date):
         self.date = date
 
@@ -808,7 +791,7 @@ with open('path/to/file.txt', 'r') as file:
 
 <p class="note">Write data to a text-file.</p>
 <pre class="prettyprint lang-python">
-with open('path/to/file.txt', 'r+') as file:
+with open('path/to/file.txt', 'w') as file:
 
     file.write('This is some text to write.')
 </pre>
@@ -824,21 +807,16 @@ from datetime import timedelta
 </pre>
 
 <pre class="prettyprint lang-python">
-now = datetime.now()
-future = now + timedelta(12)
+now = datetime.now()            # 2018-06-15 18:23:51.500993
+future = now + timedelta(12)    # 2018-06-27 18:23:59.351647
 </pre>
 
 <pre class="prettyprint lang-python">
-now                         # 2018-06-15 18:23:51.500993
-future                      # 2018-06-27 18:23:59.351647
-</pre>
-
-<pre class="prettyprint lang-python">
-now.year                    # 2018
-now.month                   # 6
-now.day                     # 15
-now.hour                    # 18
-now.minute                  # 23
+now.year                        # 2018
+now.month                       # 6
+now.day                         # 15
+now.hour                        # 18
+now.minute                      # 23
 </pre>
 
 <p class="note">Difference between dates.</p>
@@ -847,8 +825,8 @@ difference = future - now
 </pre>
 
 <pre class="prettyprint lang-python">
-difference                  # 12 days, 0:00:00
-difference.days             # 12
+difference                      # 12 days, 0:00:00
+difference.days                 # 12
 </pre>
 
 <h3><a id="Modules-Math" href="#Modules-Math" class="anchor"># Math</a></h3>
@@ -857,21 +835,21 @@ import math
 </pre>
 
 <pre class="prettyprint lang-python">
-math.pi                     # 3.14159265359
-math.e                      # 2.71828182846
+math.pi                         # 3.14159265359
+math.e                          # 2.71828182846
 </pre>
 
 <p class="note">Numerical operations, more at <a href="https://docs.python.org/2/library/math.html">https://docs.python.org/2/library/math.html</a>.</p>
 <pre class="prettyprint lang-python">
-math.floor(2.945)           # 2.0
-math.trunc(2.945)           # 2
-math.factorial(5)           # 120
-math.exp(1)                 # 2.71828182846
-math.sqrt(16)               # 4.0
+math.floor(2.945)               # 2.0
+math.trunc(2.945)               # 2
+math.factorial(5)               # 120
+math.exp(1)                     # 2.71828182846
+math.sqrt(16)                   # 4.0
 </pre>
 
 <pre class="prettyprint lang-python">
-math.sin(4 * math.pi / 180)             # 0.0697564737441
+math.sin(4 * math.pi / 180)     # 0.0697564737441
 </pre>
 
 </body>

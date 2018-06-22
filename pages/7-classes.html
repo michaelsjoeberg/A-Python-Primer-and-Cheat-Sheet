@@ -4,6 +4,7 @@
 
 <pre class="prettyprint lang-python">
 class Money (object):
+
     def __init__(self, amount, currency):
         self.amount = amount
         self.currency = currency
@@ -14,8 +15,10 @@ class Money (object):
 
 <p class="note">Create a new instance of class.</p>
 <pre class="prettyprint lang-python">
-money = Money(220, 'EUR')
+money = Money(220, 'EUR') 
+</pre>
 
+<pre class="prettyprint lang-python">
 money.amount, money.currency        # (220, 'EUR')
 </pre>
 
@@ -26,6 +29,7 @@ print(money)                        # 220 EUR
 <p class="note">Subclasses.</p>
 <pre class="prettyprint lang-python">
 class VirtualMoney (Money):
+
     def __init__(self, date):
         self.date = date
 

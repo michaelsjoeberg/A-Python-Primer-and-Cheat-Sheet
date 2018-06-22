@@ -1,3 +1,6 @@
+# 
+# Run this to compile pages into index.html.
+#
 import sys, os
 
 with open('header.html', 'r') as file:
@@ -30,6 +33,7 @@ with open('index.html', 'w') as index:
             try:
                 content = file.read().encode('utf-8')
                 index.write(content + '\n\n')
+                
             except:
                 pass
 
